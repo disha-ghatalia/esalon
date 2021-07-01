@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" lang="en">
+<head>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+<header><h1>Puppy Profile</h1>
+</header>
+<main>
+    <section class="aside">
+        <div class="avatar">
+            <img src="images/avatar-img.png" />
+       
+        <a href="#" class="edit">Edit</a>
+    </div>
+    </section>
+    <section class="container">
+        <form>
+           <div class="fieldlist"> 
+               <label for="name" class="field-title">Name:</label> 
+                <input name="name" type="text" class="form-control full-width" placeholder="Name">
+            </div>
+
+            <div class="fieldlist">
+                <p class="field-title">Date of Birth:</p> 
+                <div class="one-third"><select class="form-control" name="day_list"><option value="">Day</option></select></div>
+                <div class="one-third"> <select class="form-control" name="month_list"><option value="">Month</option></select></div>
+                <div class="one-third"><select class="form-control" name="year_list"><option value="">Year</option></select></div>
+    
+            </div>
+            <div class="fieldlist col-3">
+                <div class="one-third"><p class="field-title">Gender:</p></div>
+                <div class="one-third"><input  type="radio" id="male" name="gender" value="male" class="form-control radio-button"><label for="male" class="radio-title"><span></span>Male</label> </div>
+                <div class="one-third"><input  type="radio" id="female" name="gender" value="female" class="form-control radio-button"><label for="female" class="radio-title"><span></span>Female</label> </div>
+            </div>
+             
+            <div class="fieldlist">
+                <label class="field-title">Misc Notes:</label>
+                <textarea cols="30" rows="4" class="form-control  full-width" placeholder="Add additional notes here"></textarea>
+            </div>
+
+            <div class="fieldlist">
+                <input type="submit" value="Cancel" class="button cancel">
+                <input type="submit" value="Submit" class="button submit">
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>
