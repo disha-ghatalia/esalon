@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
+   
+    </script>
 </head>
-<body>
+<body class="hidden">
 <header><h1>Puppy Profile</h1>
 </header>
 <main>
@@ -20,7 +21,7 @@
         </div>
     </section>
     <section class="container">
-        <form class="edit-pet" method="post" action="submit.html">
+        <form id="edit-pet" method="post" action="submit.html">
            <div class="fieldlist"> 
                <label for="name" class="field-title">Name:</label> 
                 <input name="name" id="name" type="text" class="form-control full-width" placeholder="Name" maxlength="100">

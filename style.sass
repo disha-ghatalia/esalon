@@ -45,12 +45,34 @@ $font-size: 14px;
         @media (max-width: 600px)  
             @content;
    
+@mixin transition($args...) 
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+
+@mixin opacity($opacity) 
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+
+
 *
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
 
+.hidden 
+    @include opacity(0);
+    
+
+.visible 
+    @include opacity(1);
+    @include transition(opacity 1s ease-out);
+    
+    
 body 
     color: $font-color;
     font-family: $primary-font-family;
@@ -59,7 +81,7 @@ body
     max-width: 600px;
     margin: 0 auto;
     padding: 40px;
-    width: 100%
+    width: 100%;
 header
     border-bottom: 0.5px solid #32C5FF;
     padding: 7px 0;
@@ -193,7 +215,7 @@ main
                 background: #fff
                 color: $font-color
             &:hover
-                opacity: .8
+                  @include opacity(0.8);
         textarea
             outline: none;
             resize: vertical;
