@@ -1,5 +1,10 @@
-document.body.classList.remove('hidden');
-document.body.classList.add('visible');
+
+document.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(function() {
+        document.body.classList.remove('hidden');
+        document.body.classList.add('visible');
+    }, 230);
+  });
 
 var d = new Date();
 
