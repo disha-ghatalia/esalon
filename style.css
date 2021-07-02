@@ -69,25 +69,30 @@ main {
           flex: 1 auto;
 }
 
-.aside .avatar {
-  max-width: 150px;
+.aside .sidebar {
+  width: 150px;
 }
 
 @media (max-width: 600px) {
-  .aside .avatar {
+  .aside .sidebar {
     margin: 0 auto;
   }
 }
 
-.aside .avatar img {
+.aside .sidebar .avatar {
+  height: 150px;
+}
+
+.aside .sidebar .avatar img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   display: block;
   width: 100%;
+  height: 100%;
 }
 
-.aside .avatar a {
+.aside .sidebar a {
   text-align: center;
   font-weight: 700;
   display: block;
@@ -99,7 +104,7 @@ main {
   color: #6236FF;
 }
 
-.aside .avatar a:hover {
+.aside .sidebar a:hover {
   text-decoration: underline;
 }
 
