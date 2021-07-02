@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <header><h1>Puppy Profile</h1>
@@ -19,17 +19,29 @@
     </div>
     </section>
     <section class="container">
-        <form>
+        <form class="edit-pet" method="post">
            <div class="fieldlist"> 
                <label for="name" class="field-title">Name:</label> 
-                <input name="name" type="text" class="form-control full-width" placeholder="Name">
+                <input name="name" id="name" type="text" class="form-control full-width" placeholder="Name">
             </div>
 
             <div class="fieldlist">
                 <p class="field-title">Date of Birth:</p> 
-                <div class="one-third"><select class="form-control" name="day_list"><option value="">Day</option></select></div>
-                <div class="one-third"> <select class="form-control" name="month_list"><option value="">Month</option></select></div>
-                <div class="one-third"><select class="form-control" name="year_list"><option value="">Year</option></select></div>
+                <div class="one-third">
+                    <select class="form-control" name="month_list" id="month">
+                        <option value="">Month</option>
+                    </select>
+                </div>
+                <div class="one-third"> 
+                    <select class="form-control" name="day_list" id="date">
+                        <option value="">Date</option>
+                    </select>
+              </div>
+                <div class="one-third">
+                    <select class="form-control" id="year" name="year_list">
+                        <option value="">Year</option>
+                    </select>
+                </div>
     
             </div>
             <div class="fieldlist col-3">
@@ -39,8 +51,8 @@
             </div>
              
             <div class="fieldlist">
-                <label class="field-title">Misc Notes:</label>
-                <textarea cols="30" rows="4" class="form-control  full-width" placeholder="Add additional notes here"></textarea>
+                <label for="notes" class="field-title">Misc Notes:</label>
+                <textarea id="notes" cols="30" rows="4" class="form-control  full-width" placeholder="Add additional notes here"></textarea>
             </div>
 
             <div class="fieldlist">
@@ -50,5 +62,6 @@
         </form>
     </section>
 </main>
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>

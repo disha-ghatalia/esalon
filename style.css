@@ -257,6 +257,10 @@ main {
   color: #6236FF;
 }
 
+.container .fieldlist .button:hover {
+  opacity: .8;
+}
+
 .container .fieldlist textarea {
   outline: none;
   resize: vertical;
